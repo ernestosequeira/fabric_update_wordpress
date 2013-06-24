@@ -35,7 +35,7 @@ def clean_download():
     sudo('mv wp-includes wp-includes%s' % name_new)
     sudo('mv wp-admin%s wp-includes%s ..' %(name_new, name_new))  
     sudo('rm -rf wordpress')
-    print('>>> done...')
+    print green('>>> done...')
     backup_old_folders()
 
 
