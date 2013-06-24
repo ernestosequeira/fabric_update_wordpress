@@ -1,4 +1,8 @@
-fabric_update_wordpress
+Fabric_update_wordpress
 =======================
 
-Fabric update wordpress
+Example of execution
+	$ fab fabric_update_wordpress
+		Enter path: /var/www/wordpress	
+
+
