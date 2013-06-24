@@ -19,7 +19,7 @@ name_new = '_new'
 
 def download_last_version():
     print yellow('>>> Update Wordpress...')
-    path = raw_input("Enter path: ")
+    path = raw_input("Input path your wordpress: ")
     with cd('%s' % path)
     sudo('wget http://wordpress.org/latest.tar.gz')
     sudo('tar xzfv latest.tar.gz')
@@ -40,7 +40,7 @@ def clean_download():
 
 
 def backup_old_folders():
-    print yellow('>>> Backup...')
+    print yellow('>>> Backup folders old...')
     sudo('mv wp-admin wp-admin%s' % name_old)
     sudo('mv wp-includes wp-includes%s' % name_old)
     sudo('mkdir backup')
@@ -48,16 +48,8 @@ def backup_old_folders():
     sudo('mv wp-admin%s wp-admin' % name_new)
     sudo('mv wp-includes%s wp-include' % name_new)
     print green('>>> done...')
-    print red('>>> Visited http://yourdomain.com/wp-admin/upgrade.php to finish update...')
+    print green('>>> Visited http://yourdomain.com/wp-admin/upgrade.php to finish update...')
 
 
 def deploy():
     download_last_version()
-
-
-
-
-
-
-
-
